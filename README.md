@@ -105,6 +105,22 @@ Creating the docker container takes some time. Therefore `make clean_firmware` c
 
 Follow the programming instruction on page 8 of the [Quick Start Guide](https://kinesis-ergo.com/wp-content/uploads/Advantage360-Professional-QSG-v8-25-22.pdf) to flash the firmware.
 
+### Guided flashing on Linux
+
+Extract the GitHub `firmware-no-clique` artifact, then run:
+
+```sh
+bash bin/flash.sh /path/to/extracted-firmware
+```
+
+Or put the `.uf2` files in `firmware/` and run `bash bin/flash.sh`.
+
+Choose left, right, or both. The script lists matching firmware files, asks you to connect the selected half and enter bootloader mode, mounts its `ADV360PRO` drive if needed, and asks for confirmation before copying. Connect only one bootloader drive at a time: both halves have the same label, so you must select the correct side. After updating both halves, power-cycle them as described below.
+
+The script **only flashes existing files**; it never builds or downloads firmware. It uses Bash 4+, `lsblk`, and standard Linux utilities. It reuses an existing mount, otherwise uses `udisksctl` if available or `sudo mount` on systems such as NixOS. The fallback mounts the drive in a temporary directory with write access for your user and cleans up its own mount afterward. No udisks2 installation is required when `sudo` and `mount` are available.
+
+The prompts identify the bootloader keys: hold the top-right inner **Mod** key, then tap the upper-left inner hotkey for the left half, or the upper-right inner hotkey for the right half. These shortcuts assume this repository's keymap is already installed. Double-pressing the selected half's physical reset button is the alternative.
+
 ### Overview
 
 1. Extract the firmwares from the archive downloaded from the GitHub build job (If using the cloud builder) or the firmware folder (If building locally).
