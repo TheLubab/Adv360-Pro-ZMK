@@ -4,50 +4,40 @@ Personal ZMK configuration for the Kinesis Advantage 360 Pro.
 
 ## Layouts
 
+![Advantage360 keymap layers](assets/my_keymap.png)
+
+The image is exported from `config/adv360.yaml`; update it when the keymap changes.
+
+### Switching layouts
+
+Use the three inner keys on the left half:
+
+- **Top:** League
+- **Middle:** QWERTY
+- **Bottom:** Programmer Dvorak
+- **Fn + bottom:** Dvorak with a standard number row
+
 ### QWERTY
 
-Used for general typing and languages other than English.
+A standard QWERTY typing layout. The letter keys are ordinary keypresses, including when held.
 
-Features home row mods for:
+### Dvorak
 
-- `A` → GUI
-- `S` → ALT
-- `D` → CTRL
-- `F` → SHIFT
+Dvorak letters with a standard number row: numbers without Shift and their usual symbols with Shift. Three symbol keys use custom modifier-dependent pairs: backslash/hash, dollar/tilde, and at/caret.
 
-`G` provides access to the keypad layer.
+### Programmer Dvorak
 
-### DvorakP
+Dvorak letters with a symbol-first number row. Holding Shift or GUI selects the alternate numbers and symbols. Its letter keys are ordinary keypresses.
 
-Programmer Dvorak layout used for English and programming.
+### League
 
-Uses the same home row modifier setup as QWERTY.
+A left-hand layout for League of Legends using the physical ESDF positions to move the camera. See [league.dtsi](config/league.dtsi) for the key diagram and optional in-game settings. Switch to a typing layout for chat or shop searches.
 
-### Gaming
+### Fn and Mod
 
-A minimal QWERTY-based gaming layout.
+Hold **Fn** for F1–F12 and the click macros: Fn + physical Esc sends repeated left clicks; Fn + physical A sends repeated right clicks.
 
-- `QWERT → TQWER`
-- `ASDFG → GASDF`
-- This places `WASD` on the physical `ESDF` keys.
-- Space and Backspace are swapped for easier access while using the mouse.
-- Left FN become LCTRL
-- Home row mods are disabled.
-
-### Keypad
-
-Dedicated numeric keypad layer for occasional numeric input.
-
-### Fn
-
-Provides function keys, layout switching, and utility macros, including left and right auto-clickers.
-
-FN + ESC -> auto left clicker
-FN + A -> auto right clicker
-
-### Mod
-
-Keyboard configuration and maintenance controls, including Bluetooth profiles, bootloader, ZMK Studio, battery, RGB, and backlight controls.
+Hold **Mod** for Bluetooth profiles, bootloader, battery, RGB, and backlight controls.
 
 ## Building the Firmware with GitHub Actions
 
