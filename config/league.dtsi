@@ -5,9 +5,9 @@
  * +--------+--------+--------+--------+--------+--------+--------+
  * | Shop   | Chat   | Cam lock| Stats | Off    | Off    | League |
  * +--------+--------+--------+--------+--------+--------+--------+
- * | Tab    | Ping   | Spell E| Cam up | Summ 1 | Summ 2 | Qwerty |
+ * | Tab    | Spell Q| Spell W| Cam up | Spell E| Ult R  | Qwerty |
  * +--------+--------+--------+--------+--------+--------+--------+
- * | Esc    | Attack |Cam left|Cam down|Cam rght| Ult R  | Dvor P |
+ * | Esc    | Summ 1 |Cam left|Cam down|Cam rght| Summ 2 | Dvor P |
  * +--------+--------+--------+--------+--------+--------+--------+
  * | Shift  | Center | Trinket| Item 1 | Item 2 | Item 3 |
  * +--------+--------+--------+--------+--------+--------+
@@ -31,13 +31,15 @@
  *                  +--------+--------+
  *                  | Ctrl   | Alt    |
  *         +--------+--------+--------+
- *         | Spell Q| Spell W| Recall |
+ *         | Attack | Ping   | Recall |
  *         |        |        +--------+
  *         |        |        | Emote  |
  *         +--------+--------+--------+
  *
- * ESDF moves the camera; hold Z to center it. A is attack-move click.
- * R/T send D/F for summoner spells 1/2. C/V/B send item keys 1/2/3.
+ * ESDF moves the camera; hold Z to center it. Q/W/R/T send Q/W/E/R
+ * for the four champion spells. A/G send D/F for summoner spells 1/2.
+ * The large left thumb keys send A for attack move and G for ping.
+ * C/V/B send item keys 1/2/3.
  * Right: Y/U/I items 4/5/6.
  * Caps Lock: role quest; right-side lower row: F1-F6.
  * Left inner keys select QWERTY and Programmer Dvorak; hold Fn and
@@ -57,9 +59,9 @@ league {
     display-name = "League";
     bindings = <
         &kp P  &kp ENTER  &kp Y  &kp C  &none  &none  &to LEAGUE  &mo MOD  &none  &none  &none  &none  &none  &none
-        &kp TAB  &kp G  &kp E  &kp UP  &kp D  &kp F  &to QWERTY  &none  &kp N5  &kp N6  &kp N7  &none  &none  &none
-        &kp ESC  &kp A  &kp LEFT  &kp DOWN  &kp RIGHT  &kp R  &to DVORAKP  &kp LCTRL  &kp LALT  &none  &none  &none  &none  &none  &none  &none  &none  &none
+        &kp TAB  &kp Q  &kp W  &kp UP  &kp E  &kp R  &to QWERTY  &none  &kp N5  &kp N6  &kp N7  &none  &none  &none
+        &kp ESC  &kp D  &kp LEFT  &kp DOWN  &kp RIGHT  &kp F  &to DVORAKP  &kp LCTRL  &kp LALT  &none  &none  &none  &none  &none  &none  &none  &none  &none
         &kp LSHFT  &kp SPACE  &kp N4  &kp N1  &kp N2  &kp N3  &kp B  &none  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6
-        &kp LCTRL  &kp LALT  &kp V  &kp GRAVE  &kp S  &kp Q  &kp W  &kp T  &none  &none  &none  &none  &none  &none  &none  &mo FN
+        &kp LCTRL  &kp LALT  &kp V  &kp GRAVE  &kp S  &kp A  &kp G  &kp T  &none  &none  &none  &none  &none  &none  &none  &mo FN
     >;
 };
