@@ -1,541 +1,499 @@
+# Keymap-drawer input. Each layer follows the keyboard's 76 physical positions.
+# Empty keys are disabled; ▽ inherits the active lower layer.
+# Small top-right symbols show the output with Shift or GUI held.
+# Switch keys select a layer; hold keys temporarily activate one.
+
 layout: {qmk_keyboard: adv360}
 layers:
-  qwerty:
+  'Qwerty':
+    # Number row
   - '='
   - '1'
   - '2'
   - '3'
   - '4'
   - '5'
-  - {t: keypad, h: toggle}
-  - mod
+  - {t: 'League', h: 'switch'}
+  - {t: 'Mod', h: 'hold'}
   - '6'
   - '7'
   - '8'
   - '9'
   - '0'
   - '-'
-  - TAB
-  - Q
-  - W
-  - E
-  - R
-  - T
-  - {t: querty_prog, h: toggle}
-  - PSCRN
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - \
-  - ESC
-  - {t: A, h: LGUI}
-  - {t: S, h: LALT}
-  - {t: D, h: LCTRL}
-  - {t: F, h: LSHFT}
-  - {t: G, h: keypad}
-  - {t: dvorak_prog, h: toggle}
-  - LCTRL
-  - LALT
-  - LGUI
-  - RCTRL
-  - INS
-  - H
-  - {t: J, h: RSHFT}
-  - {t: K, h: RCTRL}
-  - {t: L, h: RALT}
-  - {t: ;, h: RGUI}
+    # Top row
+  - 'Tab'
+  - 'Q'
+  - 'W'
+  - 'E'
+  - 'R'
+  - 'T'
+  - {t: 'Qwerty', h: 'switch'}
+  - ''
+  - 'Y'
+  - 'U'
+  - 'I'
+  - 'O'
+  - 'P'
+  - '\'
+    # Home row and upper thumb keys
+  - 'Esc'
+  - 'A'
+  - 'S'
+  - 'D'
+  - 'F'
+  - 'G'
+  - {t: 'DvorakP', h: 'switch'}
+  - 'Left Ctrl'
+  - 'Left Alt'
+  - 'Left GUI'
+  - 'Right Ctrl'
+  - ''
+  - 'H'
+  - 'J'
+  - 'K'
+  - 'L'
+  - ';'
   - ''''
-  - LSHFT
-  - Z
-  - X
-  - C
-  - V
-  - B
-  - HOME
-  - PG UP
-  - N
-  - M
+    # Lower row and middle thumb keys
+  - 'Left Shift'
+  - 'Z'
+  - 'X'
+  - 'C'
+  - 'V'
+  - 'B'
+  - 'Home'
+  - 'Page Up'
+  - 'N'
+  - 'M'
   - ','
-  - .
-  - /
-  - RSHFT
-  - fn
+  - '.'
+  - '/'
+  - 'Right Shift'
+    # Bottom row and lower thumb keys
+  - {t: 'Fn', h: 'hold'}
   - '`'
-  - CAPS
-  - LEFT
-  - RIGHT
-  - BSPC
-  - DEL
-  - END
-  - PG DN
-  - ENTER
-  - SPACE
-  - UP
-  - DOWN
+  - 'Caps Lock'
+  - '←'
+  - '→'
+  - 'Backspace'
+  - 'Delete'
+  - 'End'
+  - 'Page Down'
+  - 'Enter'
+  - 'Space'
+  - '↑'
+  - '↓'
   - '['
   - ']'
-  - fn
-  querty_prog:
+  - {t: 'Fn', h: 'hold'}
+  'Dvorak':
+    # Number row
+  - '`'
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - {t: 'League', h: 'switch'}
+  - {t: 'Mod', h: 'hold'}
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - '-'
+    # Top row
+  - 'Tab'
+  - ';'
+  - ','
+  - '.'
+  - 'P'
+  - 'Y'
+  - {t: 'Qwerty', h: 'switch'}
+  - ''
+  - 'F'
+  - 'G'
+  - 'C'
+  - 'R'
+  - 'L'
+  - {t: '\', s: '#'}
+    # Home row and upper thumb keys
+  - 'Esc'
+  - 'A'
+  - 'O'
+  - 'E'
+  - 'U'
+  - 'I'
+  - {t: 'DvorakP', h: 'switch'}
+  - 'Left Ctrl'
+  - 'Left Alt'
+  - 'Left GUI'
+  - 'Right Ctrl'
+  - ''
+  - 'D'
+  - 'H'
+  - 'T'
+  - 'N'
+  - 'S'
+  - '-'
+    # Lower row and middle thumb keys
+  - 'Left Shift'
+  - ''''
+  - 'Q'
+  - 'J'
+  - 'K'
+  - 'X'
+  - 'Home'
+  - 'Page Up'
+  - 'B'
+  - 'M'
+  - 'W'
+  - 'V'
+  - 'Z'
+  - 'Right Shift'
+    # Bottom row and lower thumb keys
+  - {t: 'Fn', h: 'hold'}
+  - {t: '$', s: '~'}
+  - 'Caps Lock'
+  - '←'
+  - '→'
+  - 'Backspace'
+  - 'Delete'
+  - 'End'
+  - 'Page Down'
+  - 'Enter'
+  - 'Space'
+  - '↑'
+  - '↓'
+  - '/'
+  - {t: '@', s: '^'}
+  - {t: 'Fn', h: 'hold'}
+  'DvorakP':
+    # Number row
   - {t: '|', s: '`'}
-  - {t: +, s: '1'}
+  - {t: '+', s: '1'}
   - {t: '[', s: '2'}
   - {t: '{', s: '3'}
-  - {t: (, s: '4'}
+  - {t: '(', s: '4'}
   - {t: '&', s: '5'}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {t: 'League', h: 'switch'}
+  - {t: 'Mod', h: 'hold'}
   - {t: '=', s: '6'}
-  - {t: ), s: '7'}
+  - {t: ')', s: '7'}
   - {t: '}', s: '8'}
   - {t: ']', s: '9'}
   - {t: '*', s: '0'}
   - {t: '!', s: '%'}
-  - {t: ▽, type: trans}
-  - Q
-  - W
-  - E
-  - R
-  - T
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Y
-  - U
-  - I
-  - O
-  - P
-  - {t: \, s: '#'}
-  - {t: ▽, type: trans}
-  - {t: A, h: LGUI}
-  - {t: S, h: LALT}
-  - {t: D, h: LCTRL}
-  - {t: F, h: LSHFT}
-  - {t: G, h: keypad}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - H
-  - {t: J, h: RSHFT}
-  - {t: K, h: RCTRL}
-  - {t: L, h: RALT}
-  - {t: ;, h: RGUI}
+    # Top row
+  - 'Tab'
+  - ';'
+  - ','
+  - '.'
+  - 'P'
+  - 'Y'
+  - {t: 'Qwerty', h: 'switch'}
+  - ''
+  - 'F'
+  - 'G'
+  - 'C'
+  - 'R'
+  - 'L'
+  - {t: '\', s: '#'}
+    # Home row and upper thumb keys
+  - 'Esc'
+  - 'A'
+  - 'O'
+  - 'E'
+  - 'U'
+  - 'I'
+  - {t: 'DvorakP', h: 'switch'}
+  - 'Left Ctrl'
+  - 'Left Alt'
+  - 'Left GUI'
+  - 'Right Ctrl'
+  - ''
+  - 'D'
+  - 'H'
+  - 'T'
+  - 'N'
+  - 'S'
   - '-'
-  - {t: ▽, type: trans}
-  - Z
-  - X
-  - C
-  - V
-  - B
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - N
-  - M
-  - ','
-  - .
-  - /
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: $, s: '~'}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+    # Lower row and middle thumb keys
+  - 'Left Shift'
   - ''''
-  - {t: '@', s: ^}
-  - {t: ▽, type: trans}
-  dvorak_prog:
-  - {t: '|', s: '`'}
-  - {t: +, s: '1'}
-  - {t: '[', s: '2'}
-  - {t: '{', s: '3'}
-  - {t: (, s: '4'}
-  - {t: '&', s: '5'}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: '=', s: '6'}
-  - {t: ), s: '7'}
-  - {t: '}', s: '8'}
-  - {t: ']', s: '9'}
-  - {t: '*', s: '0'}
-  - {t: '!', s: '%'}
-  - {t: ▽, type: trans}
-  - ;
-  - ','
-  - .
-  - P
-  - Y
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - F
-  - G
-  - C
-  - R
-  - L
-  - {t: \, s: '#'}
-  - {t: ▽, type: trans}
-  - {t: A, h: LGUI}
-  - {t: O, h: LALT}
-  - {t: E, h: LCTRL}
-  - {t: U, h: LSHFT}
-  - {t: I, h: keypad}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - D
-  - {t: H, h: RSHFT}
-  - {t: T, h: RCTRL}
-  - {t: N, h: RALT}
-  - {t: S, h: RGUI}
-  - '-'
-  - {t: ▽, type: trans}
-  - ''''
-  - Q
-  - J
-  - K
-  - X
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - B
-  - M
-  - W
-  - V
-  - Z
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: $, s: '~'}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - /
-  - {t: '@', s: ^}
-  - {t: ▽, type: trans}
-  dvorak:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ;
-  - ','
-  - .
-  - P
-  - Y
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - F
-  - G
-  - C
-  - R
-  - L
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - A
-  - O
-  - E
-  - U
-  - I
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - D
-  - H
-  - T
-  - N
-  - S
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ''''
-  - Q
-  - J
-  - K
-  - X
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - B
-  - M
-  - W
-  - V
-  - Z
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  keypad:
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - KP NUM
-  - KP EQUAL
-  - KP DIVIDE
-  - KP MULTIPLY
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - KP 7
-  - KP 8
-  - KP 9
-  - KP MINUS
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - KP 4
-  - KP 5
-  - KP 6
-  - KP PLUS
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - KP 1
-  - KP 2
-  - KP 3
-  - KP ENTER
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - KP 0
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - KP DOT
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  fn:
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - F7
-  - F8
-  - F9
-  - F10
-  - F11
-  - F12
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: qwerty, h: toggle}
-  - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: dvorak, h: toggle}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {type: held}
-  - {t: ▽, type: trans}
-  - APP
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  mod:
-  - ''
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
-  - ''
-  - {type: held}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - '&bootloader'
-  - '&bootloader'
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - BT CLR
-  - ''
-  - RGB MEFS CMD 5
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - '&bl BL_TOG'
-  - RGB TOG
-  - '&bl BL_INC'
-  - '&bl BL_DEC'
+  - 'Q'
+  - 'J'
+  - 'K'
+  - 'X'
+  - 'Home'
+  - 'Page Up'
+  - 'B'
+  - 'M'
+  - 'W'
+  - 'V'
+  - 'Z'
+  - 'Right Shift'
+    # Bottom row and lower thumb keys
+  - {t: 'Fn', h: 'hold'}
+  - {t: '$', s: '~'}
+  - 'Caps Lock'
+  - '←'
+  - '→'
+  - 'Backspace'
+  - 'Delete'
+  - 'End'
+  - 'Page Down'
+  - 'Enter'
+  - 'Space'
+  - '↑'
+  - '↓'
+  - '/'
+  - {t: '@', s: '^'}
+  - {t: 'Fn', h: 'hold'}
+  'Fn':
+    # Number row
+  - 'F1'
+  - 'F2'
+  - 'F3'
+  - 'F4'
+  - 'F5'
+  - 'F6'
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - 'F7'
+  - 'F8'
+  - 'F9'
+  - 'F10'
+  - 'F11'
+  - 'F12'
+    # Top row
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+    # Home row and upper thumb keys
+  - '13 left clicks'
+  - '13 right clicks'
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: 'Dvorak', h: 'switch'}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+    # Lower row and middle thumb keys
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+    # Bottom row and lower thumb keys
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  - {t: '▽', type: trans}
+  'Mod':
+    # Number row
   - ''
+  - Bluetooth 1
+  - Bluetooth 2
+  - Bluetooth 3
+  - Bluetooth 4
+  - Bluetooth 5
   - ''
+  - {t: '▽', type: trans}
   - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+    # Top row
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - 'Bootloader'
+  - 'Bootloader'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+    # Home row and upper thumb keys
+  - 'Studio unlock'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - 'Clear Bluetooth'
+  - ''
+  - 'Battery'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+    # Lower row and middle thumb keys
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+    # Bottom row and lower thumb keys
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - 'Backlight toggle'
+  - 'RGB toggle'
+  - 'Backlight up'
+  - 'Backlight down'
+  - ''
+  - ''
+  'League':
+    # Number row
+  - 'Shop'
+  - 'Chat'
+  - 'Camera lock'
+  - 'Advanced stats'
+  - ''
+  - ''
+  - {t: 'League', h: 'switch'}
+  - {t: 'Mod', h: 'hold'}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+    # Top row
+  - 'Tab'
+  - 'Ping'
+  - 'Spell E'
+  - 'Camera up'
+  - 'Summoner 1'
+  - 'Summoner 2'
+  - {t: 'Qwerty', h: 'switch'}
+  - ''
+  - 'Item 4'
+  - 'Item 5'
+  - 'Item 6'
+  - ''
+  - ''
+  - ''
+    # Home row and upper thumb keys
+  - 'Esc'
+  - 'Attack move'
+  - 'Camera left'
+  - 'Camera down'
+  - 'Camera right'
+  - 'Ultimate'
+  - {t: 'DvorakP', h: 'switch'}
+  - 'Left Ctrl'
+  - 'Left Alt'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+    # Lower row and middle thumb keys
+  - 'Left Shift'
+  - 'Center camera'
+  - 'Trinket'
+  - 'Item 1'
+  - 'Item 2'
+  - 'Item 3'
+  - 'Recall'
+  - ''
+  - 'F1 Self'
+  - 'F2 Ally 1'
+  - 'F3 Ally 2'
+  - 'F4 Ally 3'
+  - 'F5 Ally 4'
+  - 'F6'
+    # Bottom row and lower thumb keys
+  - 'Left Ctrl'
+  - 'Left Alt'
+  - 'Role quest'
+  - 'Target champions'
+  - 'Stop'
+  - 'Spell Q'
+  - 'Spell W'
+  - 'Emote'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: 'Fn', h: 'hold'}

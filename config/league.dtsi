@@ -1,0 +1,65 @@
+/*
+ * League — physical QWERTY positions on the Advantage360.
+ *
+ * LEFT HALF
+ * +--------+--------+--------+--------+--------+--------+--------+
+ * | Shop   | Chat   | Cam lock| Stats | Off    | Off    | League |
+ * +--------+--------+--------+--------+--------+--------+--------+
+ * | Tab    | Ping   | Spell E| Cam up | Summ 1 | Summ 2 | Qwerty |
+ * +--------+--------+--------+--------+--------+--------+--------+
+ * | Esc    | Attack |Cam left|Cam down|Cam rght| Ult R  | Dvor P |
+ * +--------+--------+--------+--------+--------+--------+--------+
+ * | Shift  | Center | Trinket| Item 1 | Item 2 | Item 3 |
+ * +--------+--------+--------+--------+--------+--------+
+ * | Ctrl   | Alt    | Quest  | Target | Stop   |
+ * +--------+--------+--------+--------+--------+
+ *
+ * RIGHT HALF
+ * +--------+--------+--------+--------+--------+--------+--------+
+ * | Mod    | Off    | Off    | Off    | Off    | Off    | Off    |
+ * +--------+--------+--------+--------+--------+--------+--------+
+ * | Off    | Item 4 | Item 5 | Item 6 | Off    | Off    | Off    |
+ * +--------+--------+--------+--------+--------+--------+--------+
+ * | Off    | Off    | Off    | Off    | Off    | Off   | Off    |
+ * +--------+--------+--------+--------+--------+--------+--------+
+ * | F1 Self| F2 Ally| F3 Ally| F4 Ally| F5 Ally| F6     |
+ * +--------+--------+--------+--------+--------+--------+
+ * | Off    | Off    | Off    | Off    | Fn     |
+ * +--------+--------+--------+--------+--------+
+ *
+ * LEFT THUMB
+ *                  +--------+--------+
+ *                  | Ctrl   | Alt    |
+ *         +--------+--------+--------+
+ *         | Spell Q| Spell W| Recall |
+ *         |        |        +--------+
+ *         |        |        | Emote  |
+ *         +--------+--------+--------+
+ *
+ * ESDF moves the camera; hold Z to center it. A is attack-move click.
+ * R/T send D/F for summoner spells 1/2. C/V/B send item keys 1/2/3.
+ * Right: Y/U/I items 4/5/6.
+ * Caps Lock: role quest; right-side lower row: F1-F6.
+ * Left inner keys select QWERTY and Programmer Dvorak; hold Fn and
+ * press the Programmer Dvorak key to select standard Dvorak. Other unused keys are disabled.
+ *
+ * Optional in-game settings:
+ * - Bind Attack Move Click to A for a single-press attack move.
+ *   Otherwise A keeps the default Attack Move + confirming click.
+ * - Enable "Treat Target Champions Only as a toggle" to avoid holding it.
+ * - Configure mouse side buttons to hold Ctrl/Alt; thumb keys remain available.
+ *
+ * Use Point & Click, an unlocked camera, and a QWERTY host layout.
+ * Other gameplay keys use League defaults. Switch to QWERTY/DVORAK for chat/shop. This fragment is included by the main keymap.
+ */
+
+league {
+    display-name = "League";
+    bindings = <
+        &kp P  &kp ENTER  &kp Y  &kp C  &none  &none  &to LEAGUE  &mo MOD  &none  &none  &none  &none  &none  &none
+        &kp TAB  &kp G  &kp E  &kp UP  &kp D  &kp F  &to QWERTY  &none  &kp N5  &kp N6  &kp N7  &none  &none  &none
+        &kp ESC  &kp A  &kp LEFT  &kp DOWN  &kp RIGHT  &kp R  &to DVORAKP  &kp LCTRL  &kp LALT  &none  &none  &none  &none  &none  &none  &none  &none  &none
+        &kp LSHFT  &kp SPACE  &kp N4  &kp N1  &kp N2  &kp N3  &kp B  &none  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6
+        &kp LCTRL  &kp LALT  &kp V  &kp GRAVE  &kp S  &kp Q  &kp W  &kp T  &none  &none  &none  &none  &none  &none  &none  &mo FN
+    >;
+};

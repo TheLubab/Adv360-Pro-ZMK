@@ -6,12 +6,13 @@
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/pointing.h>
 
+
 #define QWERTY  0
-#define DVORAKP 1
-#define GAMING  2
-#define KEYPAD  3
-#define FN      4
-#define MOD     5
+#define DVORAK  1
+#define DVORAKP 2
+#define FN      3
+#define MOD     4
+#define LEAGUE  5
 
 / {
     behaviors {
