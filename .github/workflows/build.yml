@@ -4,11 +4,10 @@ name: Build
 
 jobs:
   build:
-    if: false
     runs-on: ubuntu-latest
     container:
       image: zmkfirmware/zmk-build-arm:stable
-    name: Build (Legacy)
+    name: Build (GitHub)
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -61,6 +60,7 @@ jobs:
             ${{ steps.get_info.outputs.file_prefix }}-left.uf2
             ${{ steps.get_info.outputs.file_prefix }}-right.uf2
   build-clique:
+    if: false
     runs-on: ubuntu-latest
     container:
       image: zmkfirmware/zmk-build-arm:stable
