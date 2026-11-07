@@ -3,15 +3,15 @@
  *
  * LEFT HALF
  * +--------+--------+--------+--------+--------+--------+--------+
- * | Shop   | Chat   | Cam lock| Stats | Off    | Off    | League |
+ * | Shop   | Chat   | Cam lock| Off    | Off    | Off    | League |
  * +--------+--------+--------+--------+--------+--------+--------+
- * | Tab    | Spell Q| Spell W| Cam up | Spell E| Ult R  | Qwerty |
+ * | Tab    | Target | Stats  | Summ 1 | Summ 2 | Stop   | Qwerty |
  * +--------+--------+--------+--------+--------+--------+--------+
- * | Esc    | Summ 1 |Cam left|Cam down|Cam rght| Summ 2 | Dvor P |
+ * | Esc    | Ping   | Spell Q| Spell W| Spell E| Ult R  | Dvor P |
  * +--------+--------+--------+--------+--------+--------+--------+
- * | Shift  | Center | Trinket| Item 1 | Item 2 | Item 3 |
+ * | Shift  | Off    | Trinket| Item 1 | Item 2 | Item 3 |
  * +--------+--------+--------+--------+--------+--------+
- * | Ctrl   | Alt    | Quest  | Target | Stop   |
+ * | Ctrl   | Alt    | Quest  | Off    | Off    |
  * +--------+--------+--------+--------+--------+
  *
  * RIGHT HALF
@@ -31,14 +31,17 @@
  *                  +--------+--------+
  *                  | Ctrl   | Alt    |
  *         +--------+--------+--------+
- *         | Attack | Ping   | Recall |
+ *         | Attack | Center | Recall |
  *         |        |        +--------+
  *         |        |        | Emote  |
  *         +--------+--------+--------+
  *
- * ESDF moves the camera; hold Z to center it. Q/W/R/T send Q/W/E/R
- * for the four champion spells. A/G send D/F for summoner spells 1/2.
- * The large left thumb keys send A for attack move and G for ping.
+ * S/D/F/G send Q/W/E/R for the four champion spells; Shift stays on
+ * the pinky. E/R send D/F for summoner spells 1/2. A sends G for ping.
+ * Q sends Grave for target champions only; T sends S for stop.
+ * W sends C for advanced stats.
+ * The large left thumb keys send A for attack move and Space to center
+ * the camera while held. Pan the camera with the mouse.
  * C/V/B send item keys 1/2/3.
  * Right: Y/U/I items 4/5/6.
  * Caps Lock: role quest; right-side lower row: F1-F6.
@@ -58,10 +61,10 @@
 league {
     display-name = "League";
     bindings = <
-        &kp P  &kp ENTER  &kp Y  &kp C  &none  &none  &to LEAGUE  &mo MOD  &none  &none  &none  &none  &none  &none
-        &kp TAB  &kp Q  &kp W  &kp UP  &kp E  &kp R  &to QWERTY  &none  &kp N5  &kp N6  &kp N7  &none  &none  &none
-        &kp ESC  &kp D  &kp LEFT  &kp DOWN  &kp RIGHT  &kp F  &to DVORAKP  &kp LCTRL  &kp LALT  &none  &none  &none  &none  &none  &none  &none  &none  &none
-        &kp LSHFT  &kp SPACE  &kp N4  &kp N1  &kp N2  &kp N3  &kp B  &none  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6
-        &kp LCTRL  &kp LALT  &kp V  &kp GRAVE  &kp S  &kp A  &kp G  &kp T  &none  &none  &none  &none  &none  &none  &none  &mo FN
+        &kp P  &kp ENTER  &kp Y  &none  &none  &none  &to LEAGUE  &mo MOD  &none  &none  &none  &none  &none  &none
+        &kp TAB  &kp GRAVE  &kp C  &kp D  &kp F  &kp S  &to QWERTY  &none  &kp N5  &kp N6  &kp N7  &none  &none  &none
+        &kp ESC  &kp G  &kp Q  &kp W  &kp E  &kp R  &to DVORAKP  &kp LCTRL  &kp LALT  &none  &none  &none  &none  &none  &none  &none  &none  &none
+        &kp LSHFT  &none  &kp N4  &kp N1  &kp N2  &kp N3  &kp B  &none  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6
+        &kp LCTRL  &kp LALT  &kp V  &none  &none  &kp A  &kp SPACE  &kp T  &none  &none  &none  &none  &none  &none  &none  &mo FN
     >;
 };

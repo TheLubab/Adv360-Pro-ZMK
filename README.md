@@ -31,7 +31,7 @@ Dvorak letters with a symbol-first number row. Holding Shift or GUI selects the 
 
 ### League
 
-A left-hand layout for League of Legends using the physical ESDF positions to move the camera. See [league.dtsi](config/league.dtsi) for the key diagram and optional in-game settings. Switch to a typing layout for chat or shop searches.
+A left-hand layout for League of Legends using physical SDFG for champion spells and ER for summoner spells. The large left thumb keys handle attack move and camera centering; pan the camera with the mouse. See [league.dtsi](config/league.dtsi) for the key diagram and optional in-game settings. Switch to a typing layout for chat or shop searches.
 
 ### Fn and Mod
 
